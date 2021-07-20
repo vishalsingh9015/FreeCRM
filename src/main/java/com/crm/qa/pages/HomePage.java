@@ -17,7 +17,7 @@ public class HomePage extends TestBase{
 	
 	
 	
-	@FindBy(xpath="//body/div[@id='ui']/div[1]/div[1]/div[3]/a[1]/i[1]")
+	@FindBy(xpath="//*[contains(@class,'users icon')]")
 	WebElement contactLink;
 	
 	@FindBy(xpath="//body/div[@id='ui']/div[1]/div[1]/div[5]/a[1]/i[1]")
@@ -26,7 +26,7 @@ public class HomePage extends TestBase{
 	@FindBy(xpath="//body/div[@id='ui']/div[1]/div[1]/div[6]/a[1]/i[1]")
 	WebElement tasksLink;
 	
-	@FindBy(xpath="/html/body/div[1]/div/div[1]/div[3]/button/i\r\n")
+	@FindBy(xpath="//body/div[@id='ui']/div[1]/div[1]/div[3]/button[1]")
 	WebElement newContactLink;
 	
 	@FindBy(xpath="/html/body/div[1]/div/div[1]/div[5]/button/i")
@@ -65,10 +65,11 @@ public class HomePage extends TestBase{
 		return new TasksPage();
 	}
 	
-	public void clickOnNewContactLink() {
+	public void clickOnNewContactLink() throws InterruptedException {
 		
 		Actions action=new Actions(driver);
 		action.moveToElement(contactLink).build().perform();
+		Thread.sleep(4000);
 		newContactLink.click();
 		
 		

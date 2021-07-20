@@ -63,7 +63,7 @@ public class HomePageTest extends TestBase{
 	
 	
 	@Test(priority=6)
-	public void clickOnNewContactTest() {
+	public void clickOnNewContactTest() throws InterruptedException {
 		homePage.clickOnNewContactLink();
 		
 	}

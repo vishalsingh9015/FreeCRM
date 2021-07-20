@@ -11,6 +11,7 @@
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jenkins.version>1.625</jenkins.version>
   </properties> 
   <build>
     <plugins>
@@ -19,7 +20,7 @@
             <version>3.1</version>
             <configuration>
                 <fork>true</fork>
-                <executable>C:\\Program Files\\Java\\jdk1.8.0_281\\bin\\javac.exe</executable>
+                <executable>C:\Program Files\Java\jdk1.8.0_291\bin\\javac.exe</executable>
             </configuration>
         </plugin>
     </plugins>
@@ -78,5 +79,7 @@
     		<artifactId>log4j</artifactId>
     		<version>1.2.17</version>
 		</dependency>
+		
+		
   </dependencies>
 </project>
